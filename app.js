@@ -1,11 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 
 const PORT = 4000;
 
-mongoose
+await mongoose
   .connect(
     "mongodb+srv://donny:donnymern@cluster0.19jmmss.mongodb.net/?retryWrites=true&w=majority"
   )
